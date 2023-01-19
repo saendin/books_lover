@@ -24,20 +24,20 @@ public class LayoutController {
 		return modelAndView;
 	}
 	
+	
 	@GetMapping("bookSearch")
-	public ModelAndView bookSearch() {
+	public ModelAndView booSearch() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("page/search/bookSearch");
 		return modelAndView;
 	}
-
 	
-	@GetMapping("bookClub")
-	public ModelAndView bookClub() {
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("page/club/bookClub");
-		return modelAndView;
-	}
+//	@GetMapping("bookClub")
+//	public ModelAndView bookClub() {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("page/club/bookClub");
+//		return modelAndView;
+//	}
 	
 	@GetMapping("myPage")
 	public ModelAndView myPage() {

@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/default_layout}">
-
 
 <!-- index.html 고유 CSS 추가 -->
 <th:block layout:fragment="css">
@@ -22,12 +20,9 @@
 <div layout:fragment="content" style="padding-top:80px; min-height:1000px; ">
 
 	<div class="container" style="min-width:1000px;" >
-	<h1>독서모임</h1>
-                    <!--th:onclick="|location.href='@{/basic/items/add}'|"  -->
-
-	<button type="button" th:onclick="|location.href='@{bookClub/detail}'|" >상세페이지</button>
+	<h1>디테일</h1>
 	</div>
 
-</div>
 
+</div>
 </html>
