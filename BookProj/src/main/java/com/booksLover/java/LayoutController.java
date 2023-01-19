@@ -1,4 +1,4 @@
-package com.yedam.java;
+package com.booksLover.java;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,4 +45,12 @@ public class LayoutController {
 		modelAndView.setViewName("page/my/myPage");
 		return modelAndView;
 	}
+	
+	@GetMapping("login")
+	public ModelAndView lgoin() {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("page/member/login");
+		return modelAndView;
+	}
+	
 }
