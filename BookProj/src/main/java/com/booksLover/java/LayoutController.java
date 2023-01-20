@@ -39,12 +39,12 @@ public class LayoutController {
 		return modelAndView;
 	}
 	
-	@GetMapping("myPage")
-	public ModelAndView myPage() {
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("page/my/myPage");
-		return modelAndView;
-	}
+//	@GetMapping("myPage")
+//	public ModelAndView myPage() {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("page/my/myPage");
+//		return modelAndView;
+//	}
 	
 	@GetMapping("login")
 	public ModelAndView lgoin() {
