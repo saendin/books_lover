@@ -18,11 +18,26 @@
 
 <!-- Content -->
 <div layout:fragment="content" style="padding-top:80px; min-height:1000px; ">
-
-	<div class="container" style="min-width:1000px;" >
-	<h1>마이페이지</h1>
+		<h1>멤버리스트페이지입니다.</h1>
+	    <table id="memberTable">
+		    <thead>
+			    <tr>
+			         <th>Id</th>
+			         <th>Name</th>
+			         <th>NickName</th>
+			         <th>Birthday</th>
+			         <th>Phone</th>
+			     </tr>
+		     </thead>
+		     <tbody>
+			     <tr th:each="mem : ${list}">
+			         <td th:text="${mem.memId}"></td>    
+			         <td th:text="${mem.memName}"></td>
+			         <td th:text="${mem.memNickName}"></td>
+			         <td th:text="${mem.memBirthday}"></td>
+			         <td th:text="${mem.memPhone}"></td>
+			     </tr>
+		     </tbody>
+	     </table>
 	</div>
-
-
-</div>
 </html>

@@ -33,12 +33,12 @@ public class MemberController {
 
 	
 	//회원 리스트 반환
-	@GetMapping("member")
+	@GetMapping("mypage")
 	public ModelAndView getMemberList() throws Exception{
 		List<MemberVO> memberList = memService.getAllMemberList();
 		
 		ModelAndView viewName = new ModelAndView();
-		viewName.setViewName("page/memberList");
+		viewName.setViewName("page/my/myPage");
 		viewName.addObject("list", memberList);
 		
 		return viewName;
