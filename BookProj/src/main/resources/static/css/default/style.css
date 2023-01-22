@@ -7,43 +7,45 @@ Primary use:	One page
 -------------------------------------------------------------------*/
 
 /* main font for menu. */
-@import url(http://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900);
+@import
+	url(http://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900)
+	;
 /* font for headings, text, tags */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800);
+@import
+	url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800)
+	;
 
 /*--------------------
 Color customizations
 change these colors to change overlays
 --------------------*/
-
 .mz-module:hover .ot-circle.color1 {
 	color: #C54A4A;
 }
+
 .mz-module:hover .ot-circle.color2 {
 	color: #6091DC;
 }
+
 .mz-module:hover .ot-circle.color3 {
 	color: #6EB377;
 }
+
 .mz-module:hover .ot-circle.color4 {
-	color: #FCBE03;
+	color: #6d8ee4;
 }
 
 /*--------------------
 1. General
 --------------------*/
-
 body {
-	margin: 0px;
+	width: 80%;
+	margin: 0 auto; margin-top : 5%;
 	font-family: "Open Sans", Sans-serif;
+	margin-top: 5%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
 	letter-spacing: 0.4px;
 	font-family: "Raleway", Sans-serif;
@@ -60,27 +62,28 @@ p {
 }
 
 .dark-bg p {
-color: #B1B1B1;	
+	color: #B1B1B1;
 }
 
 a:hover, a:focus, a:active, a.active {
-	color: #fec503;
+	color: #6d8ee4;
 }
+
 a, a:hover, a:focus, a:active, a.active {
 	outline: 0;
 }
 
 .container-fluid {
-    padding-right: 0;
-    padding-left: 0;
+	padding-right: 0;
+	padding-left: 0;
 }
 
 ::selection {
 	text-shadow: none;
-	background: #fed136;
+	background: #6d8ee4;
 }
 
-@media (min-width: 768px) {
+@media ( min-width : 768px) {
 	section {
 		padding: 150px 0;
 	}
@@ -92,18 +95,18 @@ section {
 
 ul {
 	padding-left: 0;
-	padding-top: 10px;	
+	padding-top: 10px;
 }
 
 ul li {
-    list-style: none;
-    padding-bottom: 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 23px;
-    letter-spacing: 0.2px;
-    color: #000000;
+	list-style: none;
+	padding-bottom: 10px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 23px;
+	letter-spacing: 0.2px;
+	color: #000000;
 }
 
 section ul li:before {
@@ -114,16 +117,15 @@ section ul li:before {
 	text-decoration: inherit;
 	content: "\f105";
 	padding-right: 7px;
-	color: #23AD21;
+	color: #6d8ee4;;
 }
 
 /*--------------------
 1.1 Reset bootstrap
 --------------------*/
-
 .row-0-gutter {
-    margin-left: -13px;
-    margin-right: -13px;
+	margin-left: -13px;
+	margin-right: -13px;
 }
 
 .col-0-gutter {
@@ -134,73 +136,85 @@ section ul li:before {
 /*--------------------
 2. Navigation
 --------------------*/
-
 .navbar-default {
 	background-color: #fff;
-	border-color: transparent
+	border-color: transparent;
 }
+
 .navbar-default .navbar-brand {
 	color: #fff;
-	font-family: "Open Sans",sans-serif;
+	font-family: "Open Sans", sans-serif;
 	padding: 0px;
 	margin-left: 10px;
 }
-.navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:active,.navbar-default .navbar-brand.active {
-	color: #fec503
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus,
+	.navbar-default .navbar-brand:active, .navbar-default .navbar-brand.active
+	{
+	color: #6d8ee4;;
 }
+
 .navbar-default .navbar-collapse {
-	border-color: rgba(255,255,255,.02)
+	border-color: rgba(255, 255, 255, .02);
 }
+
 .navbar-default .navbar-toggle {
-	background-color: #fed136;
-	border-color: #fed136
+	background-color: #fff;
+	color: gray;
+	/* 	border-color: #6d8ee4 */
 }
+
 .navbar-default .navbar-toggle .icon-bar {
-	background-color: #fff
+	color: gray;
 }
-.navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus {
-	background-color: #fed136
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus
+	{
+	/* 	background-color: #6d8ee4 */
 }
+
 .navbar-default .nav li a {
-	font-family: "Open Sans",sans-serif;
+	font-family: "Open Sans", sans-serif;
 	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: 600;
 	letter-spacing: 1px;
 	color: #444448;
 }
-.navbar-default .nav li a:hover,.navbar-default .nav li a:focus {
-	color: #fed136;
+
+.navbar-default .nav li a:hover, .navbar-default .nav li a:focus {
+	color: #6d8ee4;
 	outline: 0
 }
 
 .navbar-default .navbar-nav>.active>a {
 	border-radius: 0;
 	color: #fff;
-	background-color: #fed136
-}
-.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus {
-	color: #fff;
-	background-color: #fec503
+	background-color: #6d8ee4
 }
 
-@media (min-width:768px) {
-	.navbar-default
+.navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus
 	{
+	color: #fff;
+	background-color: #6d8ee4;
+}
+
+@media ( min-width :768px) {
+	.navbar-default {
 		background-color: rgba(255, 255, 255, 0.65);
 		padding: 5px 0;
-		-webkit-transition:padding .3s;
-		-moz-transition:padding .3s;
-		transition:padding .3s;
-		border:0
+		-webkit-transition: padding .3s;
+		-moz-transition: padding .3s;
+		transition: padding .3s;
+		border: 0
 	}
 	.navbar-default .navbar-brand {
 		font-size: 2em;
-		-webkit-transition:all .3s;
-		-moz-transition:all .3s;
-		transition:all .3s;
+		-webkit-transition: all .3s;
+		-moz-transition: all .3s;
+		transition: all .3s;
 		margin-top: 10px;
-	    margin-left: 10px;
+		margin-left: 10px;
 	}
 	.navbar-default .navbar-nav>.active>a {
 		border-radius: 3px
@@ -219,23 +233,24 @@ section ul li:before {
 /*--------------------
 3. Header
 --------------------*/
-
 header {
-    margin-top: 80px;
+	margin-top: 80px;
 }
 
 .owl-slider-item {
 	position: relative;
 	background-color: #000;
 }
+
 .owl-slider-item img {
 	opacity: 0.7;
 }
+
 .owl-slider .owl-controls {
 	position: absolute;
 	left: 0;
 	top: 38%;
-	width: 100%;	
+	width: 100%;
 }
 
 .owl-slider .owl-controls .owl-nav [class*=owl-] {
@@ -248,9 +263,9 @@ header {
 }
 
 .owl-slider .owl-controls .owl-nav [class*=owl-]:hover {
-    background: #000;
-    color: #fff;
-    text-decoration: none;
+	background: #000;
+	color: #fff;
+	text-decoration: none;
 }
 
 .owl-slider .owl-controls .owl-prev {
@@ -266,34 +281,34 @@ header {
 	padding-bottom: 50px;
 	position: absolute;
 	top: 50px;
-    text-align: center;
+	text-align: center;
 	transform: translateX(-50%);
 	left: 50%;
 }
 
-@media (min-width: 768px) {
+@media ( min-width : 768px) {
 	.intro-text {
 		padding-top: 230px;
 		padding-bottom: 400px;
-    }
+	}
 }
 
 .intro-text .intro-lead-in {
 	display: inline-block;
 	margin-bottom: 25px;
 	padding: 4px 20px;
-	font-family: "Open Sans",sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 19px;
 	color: #fff;
 	font-weight: 100;
 	line-height: 40px;
 }
 
-@media (min-width: 768px) {
+@media ( min-width : 768px) {
 	.intro-text .intro-lead-in {
-    font-size: 50px;
-    line-height: 40px;
-    margin-bottom: 45px;
+		font-size: 50px;
+		line-height: 40px;
+		margin-bottom: 45px;
 	}
 }
 
@@ -308,7 +323,7 @@ header {
 	text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
-@media (min-width: 768px) {
+@media ( min-width : 768px) {
 	.intro-text .intro-heading {
 		line-height: 95px;
 		font-size: 77px;
@@ -319,7 +334,6 @@ header {
 /*--------------------
 4. Sections
 --------------------*/
-
 .section-title h2 {
 	font-size: 50px;
 	color: #B3B3BB;
@@ -347,7 +361,6 @@ header {
 	color: #fff;
 }
 
-
 .section-title p {
 	font-size: 18px;
 	font-weight: 300;
@@ -358,11 +371,10 @@ header {
 /*--------------------
 4.1. CTA sectoin
 --------------------*/
-
 .section-cta {
 	padding: 40px 0;
 	color: #fff;
-	background-color: #fcbe03;
+	background-color: #fff;
 }
 
 .section-cta h2 {
@@ -381,34 +393,32 @@ header {
 	font-weight: 800;
 	color: #fff;
 	display: inline-block;
-
 	-webkit-transition: all .4s ease; /* Safari and Chrome */
 	-moz-transition: all .5s ease; /* Firefox */
 	-o-transition: all .5s ease; /* IE 9 */
 	-ms-transition: all .5s ease; /* Opera */
 	transition: all .5s ease;
-
 }
+
 .button-cta:hover {
 	color: #000;
-	background-color: #fff;	
+	background-color: #fff;
 	text-decoration: none;
 }
 
 /*--------------------
 4.1. About
 --------------------*/
-
 .mz-module {
 	position: relative;
 	margin-bottom: 30px;
 }
 
 .mz-module-about {
-    border: 1px solid #E6E6EA;
-    min-height: 280px;
-    padding: 20px;
-    background-color: #EFEFF1;
+	border: 1px solid #E6E6EA;
+	min-height: 280px;
+	padding: 20px;
+	background-color: #EFEFF1;
 }
 
 .mz-module-about h3 {
@@ -430,6 +440,7 @@ header {
 	line-height: 22px;
 	color: #848484;
 }
+
 .mz-module-button {
 	background-color: #B6B6C3;
 	padding: 15px;
@@ -443,14 +454,16 @@ header {
 	right: 0;
 	opacity: 0;
 	color: #fff;
-	-webkit-transition:all .3s;
-	-moz-transition:all .3s;
-	transition:all .3s;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
 }
+
 .mz-module:hover .mz-module-button {
 	bottom: -45px;
 	opacity: 1;
 }
+
 .mz-module-button:hover {
 	background-color: #1a1a1a;
 	color: #fff;
@@ -469,17 +482,14 @@ header {
 	color: #FFFFFF;
 	margin: 0 2px 4px;
 	font-size: 75px;
-
-	-webkit-transition:all .3s;
-	-moz-transition:all .3s;
-	transition:all .3s;
-
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
 }
 
 /*--------------------
 4.2. Featured
 --------------------*/
-
 .featured-item {
 	margin-bottom: 30px;
 	height: 110px;
@@ -495,15 +505,18 @@ header {
 	line-height: 50px;
 	text-align: center;
 }
+
 .featured-text {
 	text-align: left;
 	margin-left: 85px;
 }
+
 .featured-text h4 {
 	color: #47474C;
 	font-size: 17px;
 	font-weight: 700;
 }
+
 .featured-text p {
 	color: #747377;
 	margin-top: 7px;
@@ -515,7 +528,6 @@ header {
 /*--------------------
 4.2. Skills
 --------------------*/
-
 .section-text h3 {
 	margin: 0 0 30px;
 	font-weight: 800;
@@ -523,9 +535,9 @@ header {
 }
 
 .section-text h4 {
-    margin: 0 0 20px;
-    font-weight: 700;
-    font-size: 17px;
+	margin: 0 0 20px;
+	font-weight: 700;
+	font-size: 17px;
 }
 
 .dark-bg .section-text h3 {
@@ -539,14 +551,13 @@ header {
 /*--------------------
 4.3. Portfolio
 --------------------*/
-
 figure {
 	position: relative;
 	overflow: hidden;
 	margin: 0 1px 1px 0;
 	background: #726FB9;
 	text-align: center;
-	cursor: pointer;	
+	cursor: pointer;
 }
 
 figcaption {
@@ -554,17 +565,19 @@ figcaption {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;	
+	height: 100%;
 }
 
-.ot-portfolio-item figure figcaption > a {
+.ot-portfolio-item figure figcaption>a {
 	z-index: 1000;
 	text-indent: 200%;
 	white-space: nowrap;
 	font-size: 0;
 	opacity: 0;
 }
-.ot-portfolio-item figure figcaption, .ot-portfolio-item figure figcaption > a {
+
+.ot-portfolio-item figure figcaption, .ot-portfolio-item figure figcaption>a
+	{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -587,8 +600,8 @@ figure.effect-bubba:hover img {
 	opacity: 0.4;
 }
 
-figure.effect-bubba figcaption::before,
-figure.effect-bubba figcaption::after {
+figure.effect-bubba figcaption::before, figure.effect-bubba figcaption::after
+	{
 	position: absolute;
 	top: 30px;
 	right: 30px;
@@ -603,15 +616,15 @@ figure.effect-bubba figcaption::after {
 figure.effect-bubba figcaption::before {
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
-	-webkit-transform: scale(0,1);
-	transform: scale(0,1);
+	-webkit-transform: scale(0, 1);
+	transform: scale(0, 1);
 }
 
 figure.effect-bubba figcaption::after {
 	border-right: 1px solid #fff;
 	border-left: 1px solid #fff;
-	-webkit-transform: scale(1,0);
-	transform: scale(1,0);
+	-webkit-transform: scale(1, 0);
+	transform: scale(1, 0);
 }
 
 figure.effect-bubba h2 {
@@ -623,8 +636,8 @@ figure.effect-bubba h2 {
 	padding-top: 30%;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,-20px,0);
-	transform: translate3d(0,-20px,0);
+	-webkit-transform: translate3d(0, -20px, 0);
+	transform: translate3d(0, -20px, 0);
 }
 
 figure.effect-bubba p {
@@ -635,34 +648,32 @@ figure.effect-bubba p {
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(0,20px,0);
-	transform: translate3d(0,20px,0);
+	-webkit-transform: translate3d(0, 20px, 0);
+	transform: translate3d(0, 20px, 0);
 }
 
-figure.effect-bubba:hover figcaption::before,
-figure.effect-bubba:hover figcaption::after {
+figure.effect-bubba:hover figcaption::before, figure.effect-bubba:hover figcaption::after
+	{
 	opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
 
-figure.effect-bubba:hover h2,
-figure.effect-bubba:hover p {
+figure.effect-bubba:hover h2, figure.effect-bubba:hover p {
 	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 }
 
 /*--------------------
 4.4. Dark Short section (counters, quote, etc)
 --------------------*/
-
 .light-bg {
-	background-color: #f8f8f8;
+	background-color: #fff;
 }
 
 .dark-bg {
-	background-color: #333231;	
+	background-color: #333231;
 	color: #fff;
 }
 
@@ -690,12 +701,11 @@ figure.effect-bubba:hover p {
 /*--------------------
 4.5. Partners Slider
 --------------------*/
-
 .owl-portfolio .owl-controls {
 	position: absolute;
 	left: 0;
 	top: 38%;
-	width: 100%;	
+	width: 100%;
 }
 
 .owl-portfolio .owl-controls .owl-nav [class*=owl-] {
@@ -704,13 +714,13 @@ figure.effect-bubba:hover p {
 	border-radius: 0;
 	margin: 0;
 	font-size: 20px;
-	z-index:1000;
+	z-index: 1000;
 }
 
 .owl-portfolio .owl-controls .owl-nav [class*=owl-]:hover {
-    background: #000;
-    color: #fff;
-    text-decoration: none;
+	background: #000;
+	color: #fff;
+	text-decoration: none;
 }
 
 .owl-portfolio .owl-controls .owl-prev {
@@ -737,35 +747,36 @@ figure.effect-bubba:hover p {
 	width: auto !important;
 }
 
-.owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-    background: #FCBE03;
+.owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+	{
+	background: #6d8ee4;
 }
 
 .owl-theme .owl-dots .owl-dot span {
-    width: 30px;
-    height: 5px;
-    margin: 15px 7px 0 7px;
-    background: #d6d6d6;
-    display: block;
-    -webkit-backface-visibility: visible;
-    -webkit-transition: opacity 200ms ease;
-    -moz-transition: opacity 200ms ease;
-    -ms-transition: opacity 200ms ease;
-    -o-transition: opacity 200ms ease;
-    transition: opacity 200ms ease;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 0;
+	width: 30px;
+	height: 5px;
+	margin: 15px 7px 0 7px;
+	background: #d6d6d6;
+	display: block;
+	-webkit-backface-visibility: visible;
+	-webkit-transition: opacity 200ms ease;
+	-moz-transition: opacity 200ms ease;
+	-ms-transition: opacity 200ms ease;
+	-o-transition: opacity 200ms ease;
+	transition: opacity 200ms ease;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 0;
 }
 
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-    background: #FCBE03;
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+	{
+	background: #6d8ee4;
 }
 
 /*--------------------
 4.6. Team
 --------------------*/
-
 .team-item {
 	text-align: center;
 	background-color: #fff;
@@ -788,10 +799,10 @@ figure.effect-bubba:hover p {
 }
 
 .team-item p {
-    font-size: 13px;
-    font-weight: 400;
-    color: #292929;
-    padding: 5px 10px 20px 10px;
+	font-size: 13px;
+	font-weight: 400;
+	color: #292929;
+	padding: 5px 10px 20px 10px;
 }
 
 .team-socials {
@@ -799,9 +810,9 @@ figure.effect-bubba:hover p {
 }
 
 .team-socials a {
-    color: #B2B3B7;
-    font-size: 20px;
-    margin: 0 10px;
+	color: #B2B3B7;
+	font-size: 20px;
+	margin: 0 10px;
 }
 
 .team-socials a:hover {
@@ -811,20 +822,21 @@ figure.effect-bubba:hover p {
 /*--------------------
 4.7. Contacts
 --------------------*/
-
 section#contact form {
 	margin-top: 15px;
 }
+
 section#contact.form-group {
-margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 
-section#contact .form-group input, section#contact .form-group textarea {
+section#contact .form-group input, section#contact .form-group textarea
+	{
 	padding: 15px;
 	border: 1px solid #fff;
 	border-radius: 0;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-	box-shadow: inset 0 0px 0px rgba(0,0,0,.075);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075);
 	font-size: 13px;
 }
 
@@ -848,14 +860,13 @@ section#contact .form-group input, section#contact .form-group textarea {
 /*--------------------
 5. Footer
 --------------------*/
-
 footer {
 	padding: 30px;
-	background-color: #000;	
+	background-color: #fff;
 }
 
 footer p {
-	color: #B7B7B7;
+	color: #7499f4;
 	margin: 0;
 	font-size: 10px;
 	text-transform: uppercase;
@@ -868,7 +879,7 @@ footer p a {
 }
 
 footer p a span {
-	color: #FCBE03;
+	color: #7499f4;
 	font-size: 10px;
 	letter-spacing: 1px;
 	font-weight: 700;
@@ -877,14 +888,15 @@ footer p a span {
 /*--------------------
 6. Modal
 --------------------*/
-
 .modal-content {
-	border-radius: 0;	
+	border-radius: 0;
 }
+
 .modal-header .close {
-	font-size: 30px;	
+	font-size: 30px;
 }
-.modal-title {	
+
+.modal-title {
 	text-transform: uppercase;
 	font-size: 23px;
 }
@@ -895,11 +907,11 @@ footer p a span {
 
 .modal-body p {
 	margin: 30px 20px;
-	color: #2D2D2D;		
+	color: #2D2D2D;
 }
 
 .modal-works {
-font-size: 11px;
+	font-size: 11px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-weight: 500;
@@ -908,7 +920,7 @@ font-size: 11px;
 }
 
 .modal-works span {
-	background-color: #FED136;
+	background-color: gray;
 	margin-right: 15px;
 	padding: 5px 10px;
 }
@@ -916,14 +928,15 @@ font-size: 11px;
 /*--------------------
 7. Components
 --------------------*/
-
-.btn-xl:hover, .btn-xl:focus, .btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl {
+.btn-xl:hover, .btn-xl:focus, .btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl
+	{
 	color: #fff;
 	background-color: #dfdfdf;
 	border-color: #dfdfdf;
 }
 
-.btn:hover, .btn:focus, .btn:active, .btn.active, .open .dropdown-toggle.btn {
+.btn:hover, .btn:focus, .btn:active, .btn.active, .open .dropdown-toggle.btn
+	{
 	color: #fff;
 	background-color: #dfdfdf;
 	border-color: #dfdfdf;
@@ -949,20 +962,20 @@ font-size: 11px;
 	background-image: none;
 	border: 1px solid transparent;
 	border-radius: 0px;
-	background-color: #FCBE03;
+	background-color: #6d8ee4;
 }
 
 .btn-xl {
-color: #fff;
-    background-color: #FCBE03;
-    /* border-color: #726FB9; */
-    font-family: "Open Sans",sans-serif;
-    text-transform: uppercase;
-    font-weight: 800;
-    border-radius: 0;
-    letter-spacing: 2px;
-    font-size: 16px;
-    padding: 17px 45px;
+	color: #fff;
+	background-color: #6d8ee4;
+	/* border-color: #726FB9; */
+	font-family: "Open Sans", sans-serif;
+	text-transform: uppercase;
+	font-weight: 800;
+	border-radius: 0;
+	letter-spacing: 2px;
+	font-size: 16px;
+	padding: 17px 45px;
 }
 
 /* Back to top button
@@ -973,6 +986,7 @@ color: #fff;
 	bottom: 40px;
 	right: 50px;
 }
+
 #back-top a {
 	width: 60px;
 	height: 60px;
@@ -988,8 +1002,9 @@ color: #fff;
 	-moz-transition: 1s;
 	transition: 1s;
 }
+
 #back-top a:hover {
-	background: #fed136;
+	background: navy;
 }
 /* arrow icon (span tag) */
 #back-top i {
@@ -997,20 +1012,19 @@ color: #fff;
 	font-size: 28px;
 }
 
-@media only screen
-and (min-width : 320px)
-and (max-width : 480px) {
-#back-top {
-	position: fixed;
-	bottom: 10px;
-	right: 30px;
-}
-#back-top a {
-	width: 40px;
-	height: 40px;
-}
-#back-top i {
-	margin-top: 7px;
-	font-size: 20px;
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+	#back-top {
+		position: fixed;
+		bottom: 10px;
+		right: 30px;
+	}
+	#back-top a {
+		width: 40px;
+		height: 40px;
+	}
+	#back-top i {
+		margin-top: 7px;
+		font-size: 20px;
+	}
 }
 }

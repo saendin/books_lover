@@ -12,7 +12,7 @@ import com.booksLover.java.member.service.MemberVO;
 /**
  * @create 01/18/23
  * @author sunjin
- * @title Member Mapper Interface
+ * @title Member ServiceImpl Interface
  */
 
 @Service
@@ -21,9 +21,21 @@ public class MemberServiceImpl implements MemberService{
 	@Autowired
 	MemberMapper mapper;
 	
-	//멤버리스트
+	//회원 마이페이지(단건조회)
+	@Override
+	public MemberVO getMember(String memId) {
+		return mapper.getMember(memId);
+	}
+	
+	//회원리스트 조회
 	@Override
 	public List<MemberVO> getAllMemberList() {
 		return mapper.getAllMemberList();
 	}
+	
+	//아이디 찾기
+
+
+
+	
 }

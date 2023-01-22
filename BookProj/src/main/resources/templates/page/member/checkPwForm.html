@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default_layout}">
+
+	<!-- myPage.html 고유 CSS -->
+	<th:block layout:fragment="css">
+		<link th:href="@{/css/member/joinForm.css}" rel="stylesheet">
+	</th:block>
+	<!-- index.html 고유 스크립트 추가 -->
+	<th:block layout:fragment="script">
+	    <!--    <script th:src="@{/js/page/home.js}"></script>-->
+	</th:block>
+
+	<!-- Content -->
+	<div id="pw_check_form" layout:fragment="content">
+		<h1>마이페이지 비밀번호 중복체크 페이지입니다</h1>
+		<input type="text" placeholder="비밀번호를 입력해주세요">
+		<button>확인</button>
+			<!-- <p th:text="${user.memPw}"></p> -->
+	</div>
+</html>

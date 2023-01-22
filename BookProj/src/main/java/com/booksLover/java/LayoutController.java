@@ -1,6 +1,7 @@
 package com.booksLover.java;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -38,19 +39,36 @@ public class LayoutController {
 //		modelAndView.setViewName("page/club/bookClub");
 //		return modelAndView;
 //	}
-	
-//	@GetMapping("myPage")
-//	public ModelAndView myPage() {
-//		ModelAndView modelAndView = new ModelAndView();
-//		modelAndView.setViewName("page/my/myPage");
-//		return modelAndView;
-//	}
-	
+
+	//로그인
 	@GetMapping("login")
-	public ModelAndView lgoin() {
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("page/member/login");
-		return modelAndView;
+	public String login(Model model) {
+		model.addAttribute("signInURL", "join"); //회원가입 URL
+		return "page/login/loginForm";
 	}
+	
+	//회원가입
+	@GetMapping("join")
+	public ModelAndView signIn(){
+		ModelAndView signInForm = new ModelAndView("page/login/joinForm");
+		signInForm.addObject("mainURL", ""); //메인 URL
+		return signInForm;
+	}
+	
+	//아이디찾기
+	@GetMapping("help/id")
+	public String findId() {
+		return "page/login/findIdForm";
+	}
+	
+	//비밀번호찾기
+	@GetMapping("help/pw")
+	public String findPw() {
+
+		return "page/login/ForgetPwForm";
+	}
+	
+	
+
 	
 }

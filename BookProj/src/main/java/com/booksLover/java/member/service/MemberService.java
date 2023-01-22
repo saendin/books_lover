@@ -9,7 +9,8 @@ import org.springframework.stereotype.Service;
  * @author sunjin
  * @title Member Mapper Interface
  */
-@Service
+//@Service
 public interface MemberService {
 	public List<MemberVO> getAllMemberList();
+	public MemberVO getMember(String memId);
 }

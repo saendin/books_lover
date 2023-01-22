@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default_layout}">
+
+	<!-- myPage.html 고유 CSS -->
+	<th:block layout:fragment="css">
+		<link th:href="@{/css/member/myPage.css}" rel="stylesheet">
+	</th:block>
+	<!-- index.html 고유 스크립트 추가 -->
+	<th:block layout:fragment="script">
+	    <!--    <script th:src="@{/js/page/home.js}"></script>-->
+	</th:block>
+
+	<!-- Content -->
+	<div id="my_page_content" layout:fragment="content">
+		<h1>마이페이지 정보수정</h1>
+		<div id="profile_wrap">
+			<div id="profile_img">
+				<div>
+					프로필사진
+				</div>
+				<div>
+					<img alt="profile_img" src="${profileImg}">
+					<button>사진변경</button><button>삭제</button>
+				</div>
+			</div>
+			<div id="profile_nickname">
+				<div>별명</div>
+				<div><input type="text" placeholder="${mem.memNickName}"></div>
+			</div>
+
+		</div>
+<!-- 	    <table id="memberTable">
+		    <thead>
+			    <tr>
+			         <th>Id</th>
+			         <th>Name</th>
+			         <th>NickName</th>
+			         <th>Birthday</th>
+			         <th>Phone</th>
+			     </tr>
+		     </thead>
+		     <tbody>
+			     <tr th:each="mem : ${list}">
+			         <td th:text="${mem.memId}"></td>
+			         <td th:text="${mem.memName}"></td>
+			         <td th:text="${mem.memNickName}"></td>
+			         <td th:text="${mem.memBirthday}"></td>
+			         <td th:text="${mem.memPhone}"></td>
+			     </tr>
+		     </tbody>
+	     </table> -->
+	</div>
+</html>

@@ -14,7 +14,7 @@ import com.booksLover.java.member.service.MemberService;
 import com.booksLover.java.member.service.MemberVO;
 
 @SpringBootTest
-class DemoApplicationTests {
+class MemberTests {
 
 	@Autowired
 	MemberMapper memberMapper;

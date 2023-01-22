@@ -15,7 +15,7 @@ import lombok.Data;
 public class MemberVO {
 	
 		private String memId;
-		private String memPwd;
+		private String memPw;
 		private String memName;
 		private String memNickName;
 		@DateTimeFormat(pattern = "yyyy-mm-dd")
