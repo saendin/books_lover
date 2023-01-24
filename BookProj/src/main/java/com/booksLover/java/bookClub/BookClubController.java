@@ -24,6 +24,8 @@ public class BookClubController {
 		modelAndView.setViewName("page/club/clubDetail");
 		return modelAndView;
 	}
+	
+	//머즈용으로 한줄 써봄
 
 
 }
