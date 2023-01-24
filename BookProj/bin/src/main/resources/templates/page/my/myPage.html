@@ -7,22 +7,37 @@
 <!-- index.html 고유 CSS 추가 -->
 <th:block layout:fragment="css">
     <!--    <link rel="stylesheet" th:href="@{/css/page/home.css}" >-->
-        
+    
+    
 </th:block>
 <!-- index.html 고유 스크립트 추가 -->
 <th:block layout:fragment="script">
     <!--    <script th:src="@{/js/page/home.js}"></script>-->
+
 </th:block>
 
 <!-- Content -->
 <div layout:fragment="content" style="padding-top:80px; min-height:1000px; ">
-
-	<div class="container" style="min-width:1000px;" >
-		<h1>도서후기</h1>
-		<div th:each="re : ${reviewList}" th:onclick="|location.href='@{/book-review/detail(reviewId=${re.reviewId})}'|">
-				<p th:text="${re.reviewTitle}" >
-				<p th:text="${re.reviewWriter}">
-		</div>
+		<h1>멤버리스트페이지입니다.</h1>
+	    <table id="memberTable">
+		    <thead>
+			    <tr>
+			         <th>Id</th>
+			         <th>Name</th>
+			         <th>NickName</th>
+			         <th>Birthday</th>
+			         <th>Phone</th>
+			     </tr>
+		     </thead>
+		     <tbody>
+			     <tr th:each="mem : ${list}">
+			         <td th:text="${mem.memId}"></td>    
+			         <td th:text="${mem.memName}"></td>
+			         <td th:text="${mem.memNickName}"></td>
+			         <td th:text="${mem.memBirthday}"></td>
+			         <td th:text="${mem.memPhone}"></td>
+			     </tr>
+		     </tbody>
+	     </table>
 	</div>
-</div>
 </html>
