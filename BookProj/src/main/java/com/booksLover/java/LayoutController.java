@@ -17,7 +17,7 @@ public class LayoutController {
 		return modelAndView;
 	}
 	
-	@GetMapping("bookReview")
+	@GetMapping("book-review")
 	public ModelAndView bookReview() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("page/review/bookReview");
@@ -25,7 +25,7 @@ public class LayoutController {
 	}
 	
 	
-	@GetMapping("bookSearch")
+	@GetMapping("book-search")
 	public ModelAndView booSearch() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("page/search/bookSearch");
