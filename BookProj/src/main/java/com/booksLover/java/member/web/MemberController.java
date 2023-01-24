@@ -33,7 +33,7 @@ public class MemberController {
 
 	
 	//회원 리스트 반환
-	@GetMapping("mypage")
+	@GetMapping("my-page")
 	public ModelAndView getMemberList() throws Exception{
 		List<MemberVO> memberList = memService.getAllMemberList();
 		
