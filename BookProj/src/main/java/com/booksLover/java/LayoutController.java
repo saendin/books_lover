@@ -17,15 +17,15 @@ public class LayoutController {
 		return modelAndView;
 	}
 	
-	@GetMapping("bookReview")
-	public ModelAndView bookReview() {
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("page/review/bookReview");
-		return modelAndView;
-	}
+//	@GetMapping("book-review")
+//	public ModelAndView bookReview() {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("page/review/bookReview");
+//		return modelAndView;
+//	}
 	
 	
-	@GetMapping("bookSearch")
+	@GetMapping("book-search")
 	public ModelAndView booSearch() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("page/search/bookSearch");
