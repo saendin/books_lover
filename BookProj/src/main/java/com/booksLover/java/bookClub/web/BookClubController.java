@@ -1,4 +1,4 @@
-package com.booksLover.java.bookClub;
+package com.booksLover.java.bookClub.web;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

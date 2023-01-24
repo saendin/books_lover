@@ -18,13 +18,13 @@ public class LayoutController {
 		return modelAndView;
 	}
 	
-	@GetMapping("book-review")
-	public ModelAndView bookReview() {
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("page/review/bookReview");
-		return modelAndView;
-	}
-	
+//	@GetMapping("book-review")
+//	public ModelAndView bookReview() {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("page/review/bookReview");
+//		return modelAndView;
+//	}
+//	
 	
 	@GetMapping("book-search")
 	public ModelAndView booSearch() {

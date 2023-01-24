@@ -15,14 +15,14 @@
 </th:block>
 
 <!-- Content -->
-<div layout:fragment="content" style="padding-top:80px; min-height:1000px; ">
+<div layout:fragment="content" style="padding-top:30px; min-height:1000px; ">
 
 	<div class="container" style="min-width:1000px;" >
 		<h1>도서후기</h1>
-		<div th:each="re : ${reviewList}" th:onclick="|location.href='@{/book-review/detail(reviewId=${re.reviewId})}'|">
+		 <div th:each="re : ${reviewList}" th:onclick="|location.href='@{/detail(reviewId=${re.reviewId})}'|">
 				<p th:text="${re.reviewTitle}" >
 				<p th:text="${re.reviewWriter}">
-		</div>
+		</div> 
 	</div>
 </div>
 </html>
