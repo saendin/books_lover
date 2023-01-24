@@ -1,13 +1,18 @@
-<html lagn="ko" xmlns:th="http://www.thymeleaf.org">
-<!--footerFragment 선언-->
-<div th:fragment="footerFragment">
-   
-	<footer>
-		<div class="container text-center">
-			Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
-		</div>
-	</footer>
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+	<!--footerFragment-->
+	<th:block th:fragment="footerFragment">
+	
+		<footer>
+	        <div class="member-footer">
+	            <div>
+	                <a href="#none">이용약관</a>
+	                <a href="#none">개인정보처리방침</a>
+	            </div>
+	            <span>BOOKSLOVER Corp.</span>
+	        </div>
+		</footer>
 	
 	
-</div>
+	</th:block>
 </html>

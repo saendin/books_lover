@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.member-footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.member-footer div a:hover{
+    text-decoration: underline;
+    color:#7499f4;
+}
+
+.member-footer div a:after{
+    content:'|';
+    font-size: 10px;
+    color:#bbb;
+    margin-right: 5px;
+    margin-left: 7px;
+    /*살짝 내려가 있기 때문에 위로 올려주기 위해 transform 사용하기*/
+    display: inline-block;
+    transform: translateY(-1px);
+
+}
+
+.member-footer div a:last-child:after{
+    display: none;
+}

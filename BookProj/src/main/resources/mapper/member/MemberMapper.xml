@@ -7,10 +7,58 @@
  * @title Member XML
  */
  -->
+	 <!-- 회원 단건조회 -->
+	 <select id="getMember" parameterType="String" resultType="MemberVO">
+	 	SELECT * FROM member
+	 	 WHERE mem_id = #{ memId }
+	 </select>
+	 
+	 <!-- 회원목록조회 -->
+	 <select id="getAllMemberList" resultType="MemberVO">
+	 	SELECT * FROM member
+	 </select>
+	 
+	 <!-- 회원가입 -->
+	 <insert id="join" parameterType="MemberVO">
+	 	INSERT INTO member  (
+	 							mem_id,
+	 							mem_pw,
+	 							mem_name,
+	 							mem_nickname,
+	 							mem_birthday,
+	 							mem_sex,
+	 							mem_phone
+	 						)
+	 	
+	 		 VALUES			(
+ 								   mem_id_seq.nextval,
+ 								#{ memPw },
+ 								#{ memName },
+ 								#{ memNickname },
+ 								#{ memBirthday },
+ 								#{ memSex },
+ 								#{ memPhone }
+	 						)
+	 </insert>
+	 
+	 <!-- 아이디찾기 -->
+	 <select id="findId" parameterType="String" resultType="MemberVO">
+	 	SELECT mem_id
+	 	  FROM member
+	 	 WHERE mem_phone = #{ memPhone } 
+	 	   AND mem_name = #{ memName };
+	 </select>
+	 
+	 <!-- 비번찾기 -->
+	 <select id="findPw" parameterType="String" resultType="MemberVO">
+	 	SELECT mem_id, mem_pw
+	 	  FROM member
+	 	 WHERE mem_email = #{ memEmail } 
+	 	   AND mem_name = #{ memName };
+	 </select>
+	 
 
- <!-- 회원목록조회 -->
- <select id="getAllMemberList" resultType="MemberVO">
- 	SELECT * FROM member
- </select>
+ 
+ 
  
  </mapper>

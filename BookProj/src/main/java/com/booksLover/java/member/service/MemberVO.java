@@ -15,13 +15,14 @@ import lombok.Data;
 public class MemberVO {
 	
 		private String memId;
-		private String memPwd;
+		private String memPw;
 		private String memName;
 		private String memNickName;
 		@DateTimeFormat(pattern = "yyyy-mm-dd")
 		private int memBirthday;
 		private int memSex;
 		private int memPhone;
+		private String memEmail;
 		private String memProfileImg;
 		private int memGrade;
 		private int memAdmin;

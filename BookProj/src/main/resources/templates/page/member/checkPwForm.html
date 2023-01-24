@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/default_layout}">
+
+<!-- checkPwForm CSS -->
+<th:block layout:fragment="css">
+	<link th:href="@{/css/member/myPage.css}" rel="stylesheet">
+</th:block>
+
+<!-- checkPwForm js -->
+<th:block layout:fragment="script">
+	<!--    <script th:src="@{/js/member/checkPwForm.js}"></script>-->
+</th:block>
+
+<!-- Content -->
+<th:block layout:fragment="content">
+	<div class="wrap">
+		<h1>
+			안녕하세요 <span th:text="${user.memId}+'님'"></span>
+		</h1>
+		<h3>회원정보 수정을 위해 비밀번호를 다시 한번 입력해주세요.</h3>
+		<input type="text" placeholder="비밀번호를 입력해주세요">
+		<button>확인</button>
+		<br><br>테스트
+		<div>
+			<a th:href="@{/my-page/update}">정보수정</a>
+		</div>
+		<!-- <p th:text="${user.memPw}"></p> -->
+	</div>
+</th:block>
+</html>

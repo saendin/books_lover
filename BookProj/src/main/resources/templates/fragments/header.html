@@ -1,59 +1,54 @@
-<html lagn="ko"
+<!DOCTYPE html>
+<html lang="ko"
       xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"> <!-- 레이아웃 속성사용 -->
 	
-
-<!--headerFragment 선언-->
-<div th:fragment="headerFragment">
-
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header page-scroll">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand page-scroll" href="/"><img src="images/logo.png" alt="Sanza theme logo"></a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="hidden">
-							<a href="/"></a>
-						</li>
-							<li>
-							<input>
-					<button type="button" th:onclick="|location.href='@{/club-detail}'|" >검색</button>
+	<!--headerFragment-->
+	<th:block th:fragment="headerFragment">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<!-- 토글 네비게이션 -->
+					<div class="navbar-header page-scroll">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand page-scroll" href="/"><img src="images/logo.png" alt="Sanza theme logo"></a>
+					</div>
+					
+					<!-- 토글 hidden nav -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="hidden">
+								<a href="/"></a>
 							</li>
-						<li>
-							<a class="page-scroll" href="/">홈</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="book-search">도서검색</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="book-review">도서후기</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="book-club">독서모임</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="my-page">나의정보</a>
-						</li>	
-						<li>
-							<a class="page-scroll" href="login">로그인</a>
-						</li>
-					</ul>
+							<li>
+								<a class="page-scroll" href="/">홈</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="book-search">도서검색</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="book-review">도서후기</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="book-club">독서모임</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="my-page">나의정보</a>
+							</li>	
+							<li>
+								<a class="page-scroll" href="login">로그인</a>
+							</li>
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
 				</div>
-				<!-- /.navbar-collapse -->
-			</div>
-			<!-- /.container-fluid -->
+
 		</nav>
 		
-		
-</div>
-	
+	</th:block>
+
 </html>

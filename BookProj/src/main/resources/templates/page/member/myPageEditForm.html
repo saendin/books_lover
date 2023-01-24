@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default_layout}">
+
+	<!-- myPage.html 고유 CSS -->
+	<th:block layout:fragment="css">
+		<link th:href="@{/css/member/myPage.css}" rel="stylesheet">
+	</th:block>
+	<!-- index.html 고유 스크립트 추가 -->
+	<th:block layout:fragment="script">
+	    <!--    <script th:src="@{/js/page/home.js}"></script>-->
+	</th:block>
+
+	<!-- Content -->
+	<th:block layout:fragment="content">
+		<div class="wrap">
+			<h1>마이페이지 정보수정</h1>
+			<div id="profile_wrap">
+				<div id="profile_img">
+					<div>
+						프로필사진
+					</div>
+					<div>
+						<img alt="profile_img" src="${user.profileImg}">
+						<button>사진변경</button><button>삭제</button>
+					</div>
+				</div>
+				<br><br>
+				<div id="profile_nickname">
+					<div>별명: <input type="text" th:placeholder="${user.memNickName}"><button>중복체크</button></div>
+					<div>전화번호: <input type="text" th:placeholder="'+82 '+${user.memPhone}"><button>인증</button></div>
+					<div>이메일: <input type="text" th:placeholder="${user.memEmail}"></div>
+					<div>비밀번호: <input type="text" th:placeholder="${user.memPw}"></div>
+				</div>
+				<button>수정완료</button>
+			</div>
+		</div>
+<!-- 	    <table id="memberTable">
+		    <thead>
+			    <tr>
+			         <th>Id</th>
+			         <th>Name</th>
+			         <th>NickName</th>
+			         <th>Birthday</th>
+			         <th>Phone</th>
+			     </tr>
+		     </thead>
+		     <tbody>
+			     <tr th:each="mem : ${list}">
+			         <td th:text="${mem.memId}"></td>
+			         <td th:text="${mem.memName}"></td>
+			         <td th:text="${mem.memNickName}"></td>
+			         <td th:text="${mem.memBirthday}"></td>
+			         <td th:text="${mem.memPhone}"></td>
+			     </tr>
+		     </tbody>
+	     </table> -->
+	</th:block>
+</html>
