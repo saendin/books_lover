@@ -3,12 +3,12 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/default_layout}">
-
+      
 <!-- index.html 고유 CSS 추가 -->
 <th:block layout:fragment="css">
-    <!--    <link rel="stylesheet" th:href="@{/css/page/home.css}" >-->
-        
-</th:block>
+<!-- 	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" >     
+ --></th:block>
+
 <!-- index.html 고유 스크립트 추가 -->
 <th:block layout:fragment="script">
     <!--    <script th:src="@{/js/page/home.js}"></script>-->
@@ -16,13 +16,9 @@
 
 <!-- Content -->
 <div layout:fragment="content" style="padding-top:80px; min-height:1000px; ">
-
 	<div class="container" style="min-width:1000px;" >
-		<h1>도서후기</h1>
-		<div th:each="re : ${reviewList}" th:onclick="|location.href='@{/book-review/detail(reviewId=${re.reviewId})}'|">
-				<p th:text="${re.reviewTitle}" >
-				<p th:text="${re.reviewWriter}">
-		</div>
+		<p>상세페이지</p>
+		<P th:text="${detail.reviewId}">.</P>
+		<p th:text="${detail.reviewTitle}"/>
 	</div>
 </div>
-</html>

@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
  * @author youree
  * @title Review interface service
  */
+
 @Service
 public interface ReviewService {
 	public List<ReviewVO> getAllReview();
+	public ReviewVO getOneReview(int reviewId);
 }

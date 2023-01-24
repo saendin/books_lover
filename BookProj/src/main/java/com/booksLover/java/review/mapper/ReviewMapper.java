@@ -14,5 +14,8 @@ import com.booksLover.java.review.service.ReviewVO;
 
 @Mapper
 public interface ReviewMapper {
+	//전체조회
 	public List<ReviewVO> getAllReview();
+	//단건조회
+	public ReviewVO getOneReview(int reviewId);
 }
