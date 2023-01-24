@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#my_page_content{
-	padding-top:80px;
+.wrap{
+	padding-top:10%;
 	min-height:1000px;
-} 
+}

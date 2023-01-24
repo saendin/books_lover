@@ -1,18 +1,13 @@
-<html lagn="ko"
+<!DOCTYPE html>
+<html lang="ko"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"> <!-- 레이아웃 속성사용 -->
 	
-
-<!--headerFragment 선언-->
-	<th:block layout:fragment="css">
-	<!-- Custom styles for this template -->
-		<link th:href="@{/css/owl.carousel.css}" rel="stylesheet">
-	</th:block>
-	<div th:fragment="headerFragment">
-	
+	<!--headerFragment-->
+	<th:block th:fragment="headerFragment">
 			<nav class="navbar navbar-default navbar-fixed-top">
 				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
+					<!-- 토글 네비게이션 -->
 					<div class="navbar-header page-scroll">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span>
@@ -22,7 +17,8 @@
 						</button>
 						<a class="navbar-brand page-scroll" href="/"><img src="images/logo.png" alt="Sanza theme logo"></a>
 					</div>
-					<!-- Collect the nav links, forms, and other content for toggling -->
+					
+					<!-- 토글 hidden nav -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
 							<li class="hidden">
@@ -52,6 +48,6 @@
 				</div>
 				<!-- /.container-fluid -->
 			</nav>
-	</div>
+	</th:block>
 	
 </html>

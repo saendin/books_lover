@@ -14,7 +14,7 @@ import com.booksLover.java.member.service.MemberVO;
 @Mapper
 public interface MemberMapper {
 		//회원 마이페이지(단건조회)
-		public MemberVO getMember(String memId);
+		public MemberVO getMember(String id);
 		
 		//회원목록 조회
 		public List<MemberVO> getAllMemberList();
@@ -23,16 +23,18 @@ public interface MemberMapper {
 		 * 회원가입
 		 */
 		//회원가입
-		public void signUp();
+		public void join(MemberVO memberVO);
 		
 		//회원탈퇴
-		public void withdrawal(String memId);
+		public void withdrawal(String id);
 		
 		//아이디 단건조회 -> 아이디 중복확인
-		public MemberVO checkMemberId(String newMemId);
+		public MemberVO checkMemberId(String newId);
 		
-		//email 조회 -> 일치하는 이메일 있으면 이미 가입된 아이디 메세지 띄움
-		public List<MemberVO> getAllEmail();
+		//아이디 중복검사
+		public MemberVO checkId(String id);
+		//이메일 중복검사(email) -> 일치하는 이메일 있으면 이미 가입된 아이디 메세지 띄움
+		public MemberVO checkEmail(String email);
 		
 		
 		
@@ -40,10 +42,10 @@ public interface MemberMapper {
 		 * 로그인
 		 */
 		//아이디 찾기
-		public MemberVO findMemId(String name, String email);
+		public MemberVO findId(String name, String email);
 		
 		//비밀번호 찾기
-		public MemberVO findMemPwd(String memId, String email);
+		public MemberVO findPw(String id, String email);
 		
 		//임시 비밀번호 발급
 		public MemberVO updateTemporaryPwd(MemberVO memVO);

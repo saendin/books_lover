@@ -14,11 +14,11 @@ public class LayoutController {
 	@GetMapping("")
 	public ModelAndView main() {
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("page/main");
+		modelAndView.setViewName("page/main/main");
 		return modelAndView;
 	}
 	
-	@GetMapping("bookReview")
+	@GetMapping("book-review")
 	public ModelAndView bookReview() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("page/review/bookReview");
@@ -26,7 +26,7 @@ public class LayoutController {
 	}
 	
 	
-	@GetMapping("bookSearch")
+	@GetMapping("book-search")
 	public ModelAndView booSearch() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("page/search/bookSearch");
@@ -55,13 +55,13 @@ public class LayoutController {
 		return signInForm;
 	}
 	
-	//아이디찾기
+	//아이디찾기폼
 	@GetMapping("help/id")
 	public String findId() {
 		return "page/login/findIdForm";
 	}
 	
-	//비밀번호찾기
+	//비밀번호찾기폼
 	@GetMapping("help/pw")
 	public String findPw() {
 

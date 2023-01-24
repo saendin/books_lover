@@ -22,6 +22,7 @@ public class MemberVO {
 		private int memBirthday;
 		private int memSex;
 		private int memPhone;
+		private String memEmail;
 		private String memProfileImg;
 		private int memGrade;
 		private int memAdmin;
