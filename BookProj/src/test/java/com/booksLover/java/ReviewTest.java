@@ -24,5 +24,6 @@ public class ReviewTest {
 		}
 		ReviewVO vo = service.getOneReview(1);
 		System.out.println(vo.getReviewWriter());
+		service.searchBook("9791168473690", 0, 0);
 	}
 }

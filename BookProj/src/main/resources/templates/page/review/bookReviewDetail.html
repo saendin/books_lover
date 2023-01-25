@@ -18,7 +18,11 @@
 <div layout:fragment="content" style="padding-top:30px; min-height:1000px; ">
 	<div class="container" style="min-width:1000px;" >
 		<p>상세페이지</p>
-		<P th:text="${detail.reviewId}">.</P>
+		<P th:text="${detail.reviewId}"/>.
 		<p th:text="${detail.reviewTitle}"/>
+		<p th:text="${detail.reviewWriter}"/>
+		<p th:text="${detail.reviewDate}"/>
+		<p th:text="${detail.reviewContent}"/>
 	</div>
 </div>
+</script>

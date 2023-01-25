@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface ReviewService {
+	public List<ReviewVO> searchBook(String keyword, int display, int start);
 	public List<ReviewVO> getAllReview();
 	public ReviewVO getOneReview(int reviewId);
 }
