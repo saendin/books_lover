@@ -9,6 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.booksLover.java.book.service.BookService;
+import com.booksLover.java.book.service.BookVO;
 import com.booksLover.java.member.mapper.MemberMapper;
 import com.booksLover.java.member.service.MemberService;
 import com.booksLover.java.member.service.MemberVO;
@@ -37,5 +39,6 @@ class MemberTests {
 		
 		memberService.getAllMemberList();
 	}
+
 
 }

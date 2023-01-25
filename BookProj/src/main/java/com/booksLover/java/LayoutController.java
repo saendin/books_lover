@@ -26,12 +26,12 @@ public class LayoutController {
 //	}
 //	
 	
-	@GetMapping("book-search")
-	public ModelAndView booSearch() {
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("page/search/bookSearch");
-		return modelAndView;
-	}
+//	@GetMapping("book/search-detail")
+//	public ModelAndView bookSearch() {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("page/search/bookSearchDetail");
+//		return modelAndView;
+//	}
 	
 //	@GetMapping("bookClub")
 //	public ModelAndView bookClub() {
