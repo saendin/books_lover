@@ -28,7 +28,7 @@ class MemberTests {
 	@Test
 	@Transactional
 	@Rollback(false)
-	public void getAllMember() {
+	public void getAllMemberTest() {
 		System.out.println("test를 시작합니다.");
 		
 		List<MemberVO> memberList = new ArrayList<>();

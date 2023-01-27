@@ -14,9 +14,9 @@ public class BookTest {
 	//회원 리스트 조회 테스트
 	@Test
 	@Transactional
-	public void search() {
+	public void bookSearchAPITest() {
 		System.out.println("====test를 시작합니다.====");
 		
-		bookService.search("아홉살인생");
+		bookService.doSearch("아홉살인생");
 	}
 }

@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.team-text {
+	height: 50px;
+	font-size: 0.8em;
+	margin-bottom: 20px;
+}
+
+.book_title {
+	font-size: 0.8em;
+	text-overflow: ellipsis;/* 글자 오버플로우 막아줌(삭제) */
+	overflow: hidden;
+	white-space: nowrap;
+}

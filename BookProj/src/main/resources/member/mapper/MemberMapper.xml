@@ -7,17 +7,6 @@
  * @title Member XML
  */
  -->
-	 <!-- 회원 단건조회 -->
-	 <select id="getMember" parameterType="String" resultType="MemberVO">
-	 	SELECT * FROM member
-	 	 WHERE mem_id = #{ memId }
-	 </select>
-	 
-	 <!-- 회원목록조회 -->
-	 <select id="getAllMemberList" resultType="MemberVO">
-	 	SELECT * FROM member
-	 </select>
-	 
 	 <!-- 회원가입 -->
 	 <insert id="join" parameterType="MemberVO">
 	 	INSERT INTO member  (
@@ -27,19 +16,54 @@
 	 							mem_nickname,
 	 							mem_birthday,
 	 							mem_sex,
+	 							mem_email,
 	 							mem_phone
 	 						)
 	 	
 	 		 VALUES			(
- 								   mem_id_seq.nextval,
+ 								#{ memId },
  								#{ memPw },
  								#{ memName },
  								#{ memNickname },
- 								#{ memBirthday },
+ 								#{ memBirth },
  								#{ memSex },
+ 								#{ memEmail },
  								#{ memPhone }
 	 						)
 	 </insert>
+	 
+	 <!-- 조회 하나로 합칠것 -->
+	 <!-- 아이디중복 조회 -->
+	 <select id="getMemberId" parameterType="String" resultType="MemberVO">
+	 	SELECT mem_id
+	 	  FROM member
+		 WHERE mem_id = #{ memId }
+	 </select>
+	 
+	 <!-- 이메일중복 조회 | 가입된 아이디 여부 조회-->
+	 <select id="getMemberEmail" parameterType="String" resultType="MemberVO">
+	 	SELECT mem_email
+	 	  FROM member
+		 WHERE mem_email = #{ memEmail }
+	 </select>
+	 
+	 <select id="getMemberNickname" parameterType="String" resultType="MemberVO">
+	 	SELECT mem_nickname
+	 	  FROM member
+		 WHERE mem_nickname = #{ memNickname }
+	 </select>
+	 
+	 <!-- 회원 단건조회 -->
+	 <select id="getMember" parameterType="String" resultType="MemberVO">
+	 	SELECT * FROM member
+	 	 WHERE mem_id = #{ memId }
+	 </select>
+	 
+	 
+	 <!-- 회원목록조회 -->
+	 <select id="getAllMemberList" resultType="MemberVO">
+	 	SELECT * FROM member
+	 </select>
 	 
 	 <!-- 아이디찾기 -->
 	 <select id="findId" parameterType="String" resultType="MemberVO">

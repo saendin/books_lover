@@ -17,12 +17,17 @@ public class MemberVO {
 		private String memId;
 		private String memPw;
 		private String memName;
-		private String memNickName;
+		private String memNickname;
 		@DateTimeFormat(pattern = "yyyy-mm-dd")
-		private int memBirthday;
 		private int memSex;
-		private int memPhone;
+		private String memPhone;
 		private String memEmail;
+		private String memBirth;
+		
+		private String memBirthYear;
+		private String memBirthMonth;
+		private String memBirthDay;
+		
 		private String memProfileImg;
 		private int memGrade;
 		private int memAdmin;

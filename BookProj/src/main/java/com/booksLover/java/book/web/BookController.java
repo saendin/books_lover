@@ -8,12 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.booksLover.java.book.service.BookService;
-import com.booksLover.java.book.service.BookVO;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationConfig;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 //
 /**
@@ -27,17 +23,6 @@ public class BookController {
 
 	@Autowired
 	BookService bookService;
-	
-//	// 책 검색 요청 함수
-//	@GetMapping("book/search")
-//	public String searchBook(@RequestParam(value = "keyword", defaultValue = "아홉살인생") String keyword, Model model) {
-////		BookVO bookVO = new BookVO();
-////		bookVO.setTitle(keyword);
-//		
-//		model.addAttribute("bookInfo", bookService.search(keyword));
-//
-//		return bookService.search(keyword);
-//	}
 	
 	// 책 검색 요청 함수
 	@GetMapping("book/search-detail")

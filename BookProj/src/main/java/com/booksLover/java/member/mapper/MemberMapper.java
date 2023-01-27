@@ -3,6 +3,7 @@ package com.booksLover.java.member.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.validation.BindingResult;
 
 import com.booksLover.java.member.service.MemberVO;
 
@@ -13,12 +14,7 @@ import com.booksLover.java.member.service.MemberVO;
  */
 @Mapper
 public interface MemberMapper {
-		//회원 마이페이지(단건조회)
-		public MemberVO getMember(String id);
-		
-		//회원목록 조회
-		public List<MemberVO> getAllMemberList();
-		
+	
 		/*
 		 * 회원가입
 		 */
@@ -32,9 +28,20 @@ public interface MemberMapper {
 		public MemberVO checkMemberId(String newId);
 		
 		//아이디 중복검사
-		public MemberVO checkId(String id);
+		public MemberVO getMemberId(String id);
+		
 		//이메일 중복검사(email) -> 일치하는 이메일 있으면 이미 가입된 아이디 메세지 띄움
-		public MemberVO checkEmail(String email);
+		public MemberVO getMemberEmail(String email);
+		
+		//닉네임 중복검사
+		public MemberVO getMemberNickname(String nickname);
+		
+		//회원 마이페이지(단건조회)
+		public MemberVO getMember(String id);
+		
+		//회원목록 조회
+		public List<MemberVO> getAllMemberList();
+		
 		
 		
 		
@@ -61,6 +68,7 @@ public interface MemberMapper {
 		
 		//회원 등급수정
 		public void updateGrade(MemberVO memberVO);
+
 		
 		
 		

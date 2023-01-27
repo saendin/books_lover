@@ -8,6 +8,7 @@
 <th:block layout:fragment="css">
 	<link th:href="@{/css/main/main.css}" rel="stylesheet">
 	<link th:href="@{/css/member/myPage.css}" rel="stylesheet">
+	<link th:href="@{/css/bookSearch/bookSearchDetail.css}" rel="stylesheet">
 </th:block>
 <!-- bookSearchDetail JS -->
 <th:block layout:fragment="script">
@@ -41,10 +42,11 @@
 							</div>
 							<div class="team-text">
  								<h3>
-									<span th:text="${bookInfo.title}"></span>
+									<span class="book_title" th:text="${bookInfo.title}"></span>
 								</h3>
 								<div class="team-position">
 									<span th:text="${bookInfo.author}"></span>
+									| <span th:text="${bookInfo.publisher}"></span>
 								</div>
 								<!-- <p th:text="${bookInfo.description}"></p> -->
 							</div>

@@ -9,6 +9,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,6 +21,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.booksLover.java.book.service.BookService;
+
 
 /**
  * @create 01/25/23
@@ -46,18 +48,34 @@ public class BookServicempl implements BookService {
     		JSONObject jsonObj = new JSONObject(); //중괄호에 들어갈 속성
     		
     		JSONArray jsonArray = new JSONArray(); //대괄호 정의(json들이 들어있는 Array(json 이외의 다른 데이트도 들어갈 수 있음)
+    		
+    		
 			try {
-				//스트링 -> JSON 파싱 -> 제이슨 객체로 형변환
+				//스트링 -> JSON형태로 파싱 -> 제이슨 객체로 형변환
 				jsonObj = (JSONObject) jsonParser.parse(stringResult);
-				System.out.println(jsonObj);
 				
-				//5. 총 검색건수 담기
+				System.out.println("jsonObj타입"+jsonObj.get("items").getClass().getName());
+				System.out.println("jsonObj"+jsonObj);
+				
+				// JSON정보를 담을 Array 선언
+//				HashMap<String, Object> hashMap = new HashMap<String, Object>();
+//				ArrayList<HashMap<String, Object>> list = new ArrayList<HashMap<String,Object>>();
+//				
+//				hashMap.put("bookInfo", (JSONObject)jsonParser.parse(stringResult));
+//				System.out.println("해시맵"+ hashMap);
+//				hashMap.put("total", list);
+				
+//				System.out.println(jsonObj);
+//				jsonObj.put(jsonObj[0]);
+				
+				//5. 총 검색건수
 				String total = jsonObj.get("total").toString();
 				System.out.println("검색결과: "+total);
 //				jsonObj.put("total", total);
 				
 				// 4. 제이슨 배열에 제이슨 객체 담기 // 대괄호 정의
 				JSONArray arrayResult = (JSONArray) jsonObj.get("items");
+				System.out.println();
 				return arrayResult;
 				
 			} catch (ParseException e) {
@@ -102,7 +120,7 @@ public class BookServicempl implements BookService {
     	HttpURLConnection con = connect(apiUrl);
         try {
             con.setRequestMethod("GET");
-            for(Map.Entry<String, String> header :requestHeaders.entrySet()) {
+            for(Map.Entry<String, String> header : requestHeaders.entrySet()) {
                 con.setRequestProperty(header.getKey(), header.getValue());
             }
 
